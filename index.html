@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Document</title>
+  </head>
+  <body class="pt-5">
+    <div class="container position-relative z-3">
+      <div class="blur position-absolute z-n1"></div>
+      <h1 class="text-center mt- mf pb-5 text-white cut">Bookmarker</h1>
+
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-md-12">
+          <h2 class="text-center text-white ">Bookmark your favorite sites</h2>
+          <!-- <form class=""> -->
+          <div class="input-container d-flex flex-column">
+            <label for="siteName" class="mb-2 text-white"
+              ><i class="fa-solid fa-book-bookmark"></i> Site Name </label
+            ><input
+              oninput="validationName()"
+              type="text"
+              placeholder="Bookmark Name"
+              id="siteName"
+              class="form-control blurin  bg-transparent text-white"
+            />
+            <div class="valid-feedback d-none" id="valid-status">
+              Looks good!
+            </div>
+            <div
+              id="validationServer03Feedback"
+              class="invalid-feedback d-none"
+            >
+              Please provide a valid Site Name.
+            </div>
+            <label for="siteUrl" class="mt-3 mb-2 text-white"
+              ><i class="fa fa-solid fa-link"></i> Site URL
+            </label>
+            <input
+              type="text"
+              id="siteUrl"
+              placeholder="Website URL"
+              class="form-control blurin bg-transparent text-white"
+              oninput="validationURL()"
+            />
+            <div class="valid-feedback d-none" id="valid-status1">
+              Looks good!
+            </div>
+            <div
+              id="validationServer03Feedback1"
+              class="invalid-feedback d-none"
+            >
+              Please provide a valid Site Name.
+            </div>
+          </div>
+          <div
+            class="button-container d-flex align-items-center justify-content-center mt-4"
+          >
+          
+            <button type="button" class="btn1 px-5" onclick="addBookMark()">
+              <strong class="fs-5">Submit</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+            
+              <div id="glow">
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </button>
+          </div>
+          <!-- </form> -->
+          <br />
+        </div>
+        <div class="table-container">
+        <table class="bg-white col-lg-12 col-md-6 table tblur">
+          <thead>
+            <tr>
+              <th class="text-center">index</th>
+              <th class="text-center">Website Name</th>
+              <th class="text-center">Visit</th>
+              <th class="text-center">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table></div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <link rel="stylesheet" href="js/bootstrap.bundle.min.js" />
+    <script src="js/index.js"></script>
+    
+  </body>
+</html>
+
+
